@@ -1,0 +1,39 @@
+﻿<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar bar-positive nav-title-slide-ios">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios-arrow-back horizontal-padd-5"></i></ion-nav-back-button>
+
+            <ion-nav-buttons side="right">
+                <button class="button button-icon icon ion-ios-search-strong" ng-click="toggleSearch(true)"> </button>
+                <button class="button button-icon icon ion-android-more-vertical" ng-click="openPopoverMenu($event)"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <div class="bar bar-header item-input-inset header-search" ng-show="rootModel.search">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <form>
+                    <input type="search" placeholder="Search" ng-model="rootModel.searchInput">
+                </form>
+            </label>
+            <button class="button button-clear" ng-click="toggleSearch(false)">
+                Cancel
+            </button>
+        </div>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" expose-aside-when="large">
+        <header class="bar bar-positive menu-header bar-header bar-stable fg-white">
+            <h2>Binary Lies</h2>
+        </header>
+        <ion-content class="has-header menu-header">
+            <ion-list>
+                <ion-item nav-clear item-icon-left menu-close href="#/app/posts">
+                    <i class="icon ion-ios-paper"></i>
+                    Blog Posts
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

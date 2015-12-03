@@ -1,0 +1,21 @@
+﻿<ion-view title="Posts">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="center" ng-show="model.posts.length==0">
+        <div class="row">
+            <ion-spinner></ion-spinner>
+        </div>
+    </ion-content>
+    <ion-content class="has-header" ng-hide="model.posts.length==0">
+        <ion-list>
+            <ion-item ng-repeat="item in model.posts" class="item-thumbnail-left" ng-click="openPost(item)">
+
+                <img ng-src="{{item.ImageUrl}}">
+                <h2>{{item.Title}}</h2>
+                <p>{{item.SubTitle}}</p>
+                <p>{{item.Date | amCalendar}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
