@@ -1,4 +1,4 @@
-# Binary Lies https://binarylies.ghost.io/
+# [Binary Lies](https://binarylies.ghost.io/)
 
 ## Cordova + Ionic in Visual Studio - 101 Tutorial
 Code for blog post part 1 & 2
